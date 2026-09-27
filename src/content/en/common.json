@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "actions": {
+    "downloadResume": "Download resume (EN)",
+    "viewProjects": "View projects",
+    "getInTouch": "Get in touch",
+    "viewRepository": "Repository",
+    "viewDemo": "Live demo",
+    "readMore": "Learn more",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "backToTop": "Back to top"
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Switch to Portuguese"
+  },
+  "projectStatus": {
+    "shipped": "Shipped",
+    "in-progress": "In development",
+    "hackathon": "Hackathon"
+  },
+  "footer": {
+    "builtWith": "Built with Next.js, TypeScript and Tailwind CSS.",
+    "rights": "All rights reserved."
+  }
+}

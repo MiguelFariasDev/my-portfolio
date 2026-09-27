@@ -1,0 +1,111 @@
+{
+  "home": {
+    "metaTitle": "Miguel Farias | Desenvolvedor de Software e Pesquisador",
+    "metaDescription": "Desenvolvedor fullstack com foco em backend, arquitetura de software e sistemas distribuídos. C#/.NET, AWS, React e TypeScript.",
+    "eyebrow": "Desenvolvedor FullStack · C# / .NET / AWS / React / TypeScript",
+    "title": "Miguel Farias",
+    "role": "Desenvolvedor de Software e Pesquisador",
+    "summary": "Transformo problemas complexos em sistemas robustos, eficientes e escaláveis. Trabalho com backend, arquitetura de software e computação em nuvem, com passagem pelo setor financeiro e pesquisa de mestrado em sistemas distribuídos na UFC.",
+    "highlightsTitle": "Em resumo",
+    "highlights": [
+      "Desenvolvimento backend no setor financeiro na FitBank, com C#, .NET, Angular, SQL Server, MongoDB e Azure em ambientes de alta demanda.",
+      "Pesquisa e Desenvolvimento na Akiyama, com inteligência artificial e visão computacional aplicadas a detecção de vivacidade.",
+      "Mestrado em Ciência da Computação na UFC, pesquisando computational offloading em Mobile Cloud Computing via gRPC."
+    ],
+    "featuredProjectsTitle": "Projetos em destaque",
+    "featuredProjectsSubtitle": "Três sistemas que resumem o que me interessa construir: arquitetura bem definida, integração entre serviços e problemas reais resolvidos de ponta a ponta."
+  },
+  "about": {
+    "metaTitle": "Sobre",
+    "metaDescription": "Formação, pesquisa, trajetória profissional e áreas de interesse de Miguel Farias.",
+    "title": "Sobre",
+    "subtitle": "Desenvolvedor de software e pesquisador, com atuação entre desenvolvimento de produtos, pesquisa acadêmica e exploração de novas tecnologias.",
+    "sections": [
+      {
+        "id": "intro",
+        "title": "Quem sou",
+        "body": "Sou desenvolvedor de software e pesquisador com formação em Ciência da Computação, experiência em desenvolvimento backend e interesse em arquitetura de software, computação em nuvem, sistemas distribuídos e inteligência artificial. Minha atuação combina desenvolvimento de produtos, pesquisa acadêmica e exploração de novas tecnologias, buscando construir sistemas que conciliem qualidade arquitetural, desempenho, segurança e escalabilidade."
+      },
+      {
+        "id": "education",
+        "title": "Formação",
+        "body": "Sou Bacharel em Ciência da Computação pela Universidade Federal do Ceará (UFC) e atualmente curso Mestrado em Ciência da Computação na mesma instituição. Minha formação acadêmica é complementada por experiência prática em desenvolvimento de software, pesquisa científica, monitoria acadêmica e desenvolvimento de projetos próprios."
+      },
+      {
+        "id": "research",
+        "title": "Pesquisa",
+        "body": "Minha pesquisa de mestrado está relacionada a Computational Offloading em ambientes de Mobile Cloud Computing, investigando o impacto computacional e energético do processamento remoto de aplicações móveis utilizando comunicação bidirecional via gRPC. O trabalho envolve experimentação em dispositivos móveis e servidores, análise de consumo energético, utilização de CPU e memória, desempenho de comunicação e processamento, além da avaliação de diferentes linguagens e estratégias de offloading. A pesquisa busca contribuir para a compreensão dos trade-offs envolvidos na transferência de processamento entre dispositivos móveis e recursos computacionais remotos."
+      },
+      {
+        "id": "career",
+        "title": "Trajetória profissional",
+        "body": "Atuei como desenvolvedor de sistemas na FitBank, empresa do setor financeiro, trabalhando principalmente com C#, .NET, Angular, SQL Server, MongoDB e Azure. Participei do desenvolvimento e manutenção de sistemas do setor financeiro, com APIs REST, operações bancárias, integração entre serviços, manutenção de sistemas legados e evolução arquitetural, além de práticas como Clean Architecture, SOLID, Git, CI/CD e metodologias ágeis. Atualmente atuo em Pesquisa e Desenvolvimento na Akiyama, com soluções de inteligência artificial e visão computacional, incluindo mecanismos de detecção de vivacidade (liveness) e aplicação de modelos de Deep Learning."
+      },
+      {
+        "id": "teaching",
+        "title": "Ensino",
+        "body": "Durante a graduação na UFC, atuei como monitor acadêmico por quatro semestres em disciplinas de Algoritmos, Estruturas de Dados e Estruturas de Dados Avançadas, auxiliando estudantes na compreensão de fundamentos de programação e resolução de problemas. Também fui tutor da Olimpíada Brasileira de Informática (OBI), trabalhando lógica de programação e algoritmos principalmente em Java. Essas experiências desenvolveram minhas habilidades de comunicação técnica, didática e mentoria, e fortaleceram minha própria compreensão dos fundamentos da computação."
+      }
+    ],
+    "stackTitle": "Stack",
+    "stack": [
+      "C#",
+      ".NET",
+      "Java",
+      "Golang",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Angular",
+      "ASP.NET Core",
+      "PostgreSQL",
+      "SQL Server",
+      "MongoDB",
+      "AWS",
+      "Azure",
+      "gRPC"
+    ],
+    "interestsTitle": "Áreas de interesse",
+    "interests": [
+      "Desenvolvimento de Software",
+      "Backend e FullStack",
+      "C# / .NET",
+      "Cloud Computing",
+      "AWS e Azure",
+      "Sistemas Distribuídos",
+      "Arquitetura de Software",
+      "Design Patterns",
+      "Inteligência Artificial",
+      "Deep Learning",
+      "Computer Vision",
+      "Mobile Cloud Computing",
+      "Computational Offloading",
+      "Engenharia de Software",
+      "Sistemas escaláveis e de alta disponibilidade"
+    ]
+  },
+  "projects": {
+    "metaTitle": "Projetos",
+    "metaDescription": "Projetos de software desenvolvidos por Miguel Farias: Iustitia, SIGIS e FileSharing.",
+    "title": "Projetos",
+    "subtitle": "Sistemas construídos do zero, com decisões de arquitetura documentadas e problemas de domínio reais por trás de cada um.",
+    "emptyImagesNotice": "Capturas de tela dos sistemas serão adicionadas em breve."
+  },
+  "resume": {
+    "metaTitle": "Currículo",
+    "metaDescription": "Currículo de Miguel Farias em PDF, em português e inglês.",
+    "title": "Currículo",
+    "subtitle": "Formação, experiência profissional e competências técnicas em um documento de uma página.",
+    "languageNotice": "Este PDF está em português. Troque o idioma do site para baixar a versão em inglês.",
+    "viewerFallback": "Não foi possível exibir o PDF neste navegador. Use o botão de download acima."
+  },
+  "contact": {
+    "metaTitle": "Contato",
+    "metaDescription": "Entre em contato com Miguel Farias por e-mail, LinkedIn ou GitHub.",
+    "title": "Contato",
+    "subtitle": "Aberto a conversas sobre oportunidades, colaborações em pesquisa e projetos de software. O e-mail é o caminho mais direto.",
+    "emailLabel": "E-mail",
+    "locationLabel": "Localização",
+    "socialsLabel": "Redes"
+  }
+}

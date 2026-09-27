@@ -1,0 +1,39 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "resume": "Currículo",
+    "contact": "Contato"
+  },
+  "actions": {
+    "downloadResume": "Baixar currículo (PT-BR)",
+    "viewProjects": "Ver projetos",
+    "getInTouch": "Entrar em contato",
+    "viewRepository": "Repositório",
+    "viewDemo": "Ver demo",
+    "readMore": "Saiba mais",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "backToTop": "Voltar ao topo"
+  },
+  "theme": {
+    "label": "Tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "language": {
+    "label": "Idioma",
+    "switchTo": "Mudar para inglês"
+  },
+  "projectStatus": {
+    "shipped": "Publicado",
+    "in-progress": "Em desenvolvimento",
+    "hackathon": "Hackathon"
+  },
+  "footer": {
+    "builtWith": "Feito com Next.js, TypeScript e Tailwind CSS.",
+    "rights": "Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "iustitia": {
+    "name": "Iustitia",
+    "summary": "SaaS de gestão jurídica que automatiza o acompanhamento de publicações e prazos processuais em escritórios de advocacia.",
+    "description": "Plataforma SaaS voltada à gestão jurídica para escritórios de advocacia, desenvolvida para automatizar processos relacionados ao acompanhamento de publicações e prazos processuais. O sistema faz a captura automática de publicações do CNJ e as processa e classifica com inteligência artificial (Anthropic Claude), sempre com um fluxo de revisão humana para validar o que a IA produz. A arquitetura é orientada a modularidade, combinando Clean Architecture, DDD, CQRS, Vertical Slice Architecture, Outbox Pattern e multi-tenancy."
+  },
+  "sigis": {
+    "name": "SIGIS",
+    "summary": "Sistema intersetorial de apoio à gestão do cuidado de pessoas com TEA na rede pública de Crateús/CE.",
+    "description": "Plataforma intersetorial desenvolvida para apoiar a gestão do cuidado de pessoas com Transtorno do Espectro Autista (TEA) na rede pública municipal de Crateús/CE. O sistema integra informações e processos das áreas de Saúde, Educação e Assistência Social, reduzindo a fragmentação dos dados e oferecendo uma visão unificada do acompanhamento de cada usuário. Foi construído sozinho durante o Hackathon Banco do Nordeste + UFC + Prefeitura de Crateús, sob o nome \"Last Soldier\", com 4º lugar, usando arquitetura de monólito modular."
+  },
+  "filesharing": {
+    "name": "FileSharing",
+    "summary": "Plataforma de compartilhamento temporário de arquivos com links privados e expiração automática.",
+    "description": "Plataforma de compartilhamento temporário de arquivos desenvolvida com foco em segurança, escalabilidade e arquitetura limpa. Os usuários fazem upload e compartilham arquivos por meio de links privados e não previsíveis, com validade de 24 horas. Os arquivos ficam em um bucket privado no AWS S3, com upload direto para o S3, autenticação baseada em JWT, geração de links temporários e comunicação em tempo real via SignalR."
+  }
+}

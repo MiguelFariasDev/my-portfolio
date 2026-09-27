@@ -1,26 +1,368 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  /* Accent unico do sistema (CLAUDE.md 5.1). Mede 5.59:1 sobre o fundo claro,
+     entao serve tanto para texto quanto para o anel de foco. */
+  --brand: oklch(0.52 0.17 255);
+  --brand-foreground: oklch(0.985 0 0);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  /* O anel de foco usa o accent: o cinza anterior media 2.59:1 sobre branco,
+     abaixo do minimo de 3:1 da WCAG 2.2 SC 1.4.11. */
+  --ring: var(--brand);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  /* Tema escuro pensado, não o claro invertido (CLAUDE.md 5.2): o fundo é um
+     cinza levemente azulado em vez de preto puro, e os cards sobem um degrau
+     de luminosidade para se separarem dele sem depender só da borda. */
+  --background: oklch(0.175 0.013 265);
+  --foreground: oklch(0.965 0.003 265);
+  --card: oklch(0.215 0.015 265);
+  --card-foreground: oklch(0.965 0.003 265);
+  --popover: oklch(0.225 0.015 265);
+  --popover-foreground: oklch(0.965 0.003 265);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.265 0.014 265);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.265 0.014 265);
+  --muted-foreground: oklch(0.715 0.016 265);
+  --accent: oklch(0.265 0.014 265);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  /* Mais claro e menos saturado que no tema claro: sobre fundo escuro a mesma
+     cor leria como quase preta. 8.02:1 sobre o fundo, 7.26:1 sobre o card. */
+  --brand: oklch(0.72 0.14 250);
+  --brand-foreground: oklch(0.205 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: var(--brand);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.215 0.015 265);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.922 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.265 0.014 265);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+/* ==========================================================================
+   View Transitions
+   Motion com propósito (CLAUDE.md §5.2): cada animação comunica uma relação
+   espacial — descer da home para uma seção, voltar, ou reconhecer que um
+   elemento é o mesmo objeto em outro lugar.
+   ========================================================================== */
+
+:root {
+  --duration-exit: 150ms;
+  --duration-enter: 210ms;
+  --duration-move: 400ms;
+  /* Curva de desaceleração suave, no espírito das transições do iOS. */
+  --ease-glide: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+@keyframes vt-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes vt-slide {
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
+}
+
+@keyframes vt-rise {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes vt-via-blur {
+  30% {
+    filter: blur(3px);
+  }
+}
+
+/* O root não anima: o header (com backdrop-blur) e o rodapé continuam vivos
+   durante a transição em vez de congelarem num snapshot. */
+::view-transition-old(root) {
+  display: none;
+}
+::view-transition-new(root) {
+  animation: none;
+}
+
+/* A camada de transição não deve engolir cliques no meio da animação. */
+::view-transition {
+  pointer-events: none;
+}
+
+/* --- Navegação lateral (entre seções irmãs): cross-fade com subida sutil --- */
+::view-transition-old(.fade-out) {
+  animation: var(--duration-exit) ease-in both vt-fade reverse;
+}
+::view-transition-new(.fade-in) {
+  animation:
+    var(--duration-enter) ease-out var(--duration-exit) both vt-fade,
+    var(--duration-move) var(--ease-glide) both vt-rise;
+}
+
+/* --- Navegação hierárquica: sair da home (forward) e voltar para ela (back) --- */
+::view-transition-old(.nav-forward) {
+  --slide-offset: -60px;
+  animation:
+    var(--duration-exit) ease-in both vt-fade reverse,
+    var(--duration-move) var(--ease-glide) both vt-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --slide-offset: 60px;
+  animation:
+    var(--duration-enter) ease-out var(--duration-exit) both vt-fade,
+    var(--duration-move) var(--ease-glide) both vt-slide;
+}
+
+::view-transition-old(.nav-back) {
+  --slide-offset: 60px;
+  animation:
+    var(--duration-exit) ease-in both vt-fade reverse,
+    var(--duration-move) var(--ease-glide) both vt-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -60px;
+  animation:
+    var(--duration-enter) ease-out var(--duration-exit) both vt-fade,
+    var(--duration-move) var(--ease-glide) both vt-slide;
+}
+
+/* --- Elementos compartilhados: o mesmo objeto mudando de lugar --- */
+::view-transition-group(.morph) {
+  animation-duration: var(--duration-move);
+  animation-timing-function: var(--ease-glide);
+}
+::view-transition-image-pair(.morph) {
+  animation-name: vt-via-blur;
+}
+
+/* --- Indicadores deslizantes (pílula da navegação e do seletor de idioma) --- */
+::view-transition-group(.nav-pill),
+::view-transition-group(.lang-pill) {
+  animation-duration: 260ms;
+  animation-timing-function: cubic-bezier(0.5, 0, 0.2, 1);
+  z-index: 1;
+}
+::view-transition-old(.nav-pill),
+::view-transition-new(.nav-pill),
+::view-transition-old(.lang-pill),
+::view-transition-new(.lang-pill) {
+  animation: none;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+}
+
+/* --- Troca de idioma: mesmo lugar, outro texto — só um cross-fade --- */
+::view-transition-group(.page-fade) {
+  animation-duration: var(--duration-move);
+  animation-timing-function: var(--ease-glide);
+}
+::view-transition-old(.page-fade) {
+  animation: var(--duration-exit) ease-in both vt-fade reverse;
+}
+::view-transition-new(.page-fade) {
+  animation: var(--duration-enter) ease-out var(--duration-exit) both vt-fade;
+}
+
+/* ==========================================================================
+   Tipografia
+   Tracking e leading variam com o tamanho: texto grande lido com o mesmo
+   espacejamento do corpo parece solto, e corpo com tracking de display parece
+   apertado. A escala vive aqui, não espalhada em utilitários por componente.
+   ========================================================================== */
+
+@layer base {
+  h1 {
+    letter-spacing: -0.028em;
+    line-height: 1.04;
+  }
+  h2 {
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  h3 {
+    letter-spacing: -0.012em;
+    line-height: 1.25;
+  }
+}
+
+/* ==========================================================================
+   Cromo translúcido
+   O header flutua sobre o conteúdo. No topo da página não há nada para
+   separar, então a divisória só aparece quando algo passa por baixo dele.
+   ========================================================================== */
+
+.site-chrome {
+  transition: border-color 200ms ease-out;
+}
+
+@supports (animation-timeline: scroll()) {
+  .site-chrome {
+    border-bottom-color: transparent;
+    animation: site-chrome-edge linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 4rem;
+  }
+
+  @keyframes site-chrome-edge {
+    to {
+      border-bottom-color: var(--border);
+    }
+  }
+}
+
+/* ==========================================================================
+   Preferências de acessibilidade
+   Movimento reduzido já está tratado junto às view transitions. Aqui entram
+   as outras duas: quem pede menos transparência recebe superfícies sólidas,
+   e quem pede mais contraste recebe divisórias firmes.
+   ========================================================================== */
+
+@media (prefers-reduced-transparency: reduce) {
+  .site-chrome {
+    background-color: var(--background);
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --border: oklch(0.72 0 0);
+    --muted-foreground: oklch(0.42 0 0);
+  }
+
+  .dark {
+    --border: oklch(1 0 0 / 40%);
+    --muted-foreground: oklch(0.82 0 0);
+  }
+
+  .site-chrome {
+    background-color: var(--background);
+    backdrop-filter: none;
+    border-bottom-color: var(--border);
+    animation: none;
+  }
 }

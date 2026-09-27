@@ -1,0 +1,17 @@
+{
+  "iustitia": {
+    "name": "Iustitia",
+    "summary": "Legal practice management SaaS that automates tracking of court publications and procedural deadlines for law firms.",
+    "description": "A SaaS platform for legal practice management, built to automate how law firms track court publications and procedural deadlines. The system automatically captures publications from the Brazilian National Council of Justice (CNJ) and processes and classifies them with AI (Anthropic Claude), always behind a human review step that validates whatever the model produces. The architecture is modular by design, combining Clean Architecture, DDD, CQRS, Vertical Slice Architecture, the Outbox pattern and multi-tenancy."
+  },
+  "sigis": {
+    "name": "SIGIS",
+    "summary": "Cross-sector platform supporting care management for people on the autism spectrum in the public network of Crateús, Brazil.",
+    "description": "A cross-sector platform built to support care management for people with Autism Spectrum Disorder (ASD) across the municipal public network of Crateús, Brazil. It brings together information and workflows from healthcare, education and social services, cutting down data fragmentation and giving each case a single, unified view. I built it solo during a hackathon run by Banco do Nordeste, UFC and the Crateús city government, under the name \"Last Soldier\", finishing 4th, on a modular monolith architecture."
+  },
+  "filesharing": {
+    "name": "FileSharing",
+    "summary": "Temporary file sharing platform with private, unguessable links that expire automatically.",
+    "description": "A temporary file sharing platform built around security, scalability and clean architecture. Users upload and share files through private, unguessable links that stay valid for 24 hours. Files live in a private AWS S3 bucket, with direct-to-S3 uploads, JWT-based authentication, temporary link generation and real-time communication over SignalR."
+  }
+}
