@@ -35,5 +35,19 @@
   "footer": {
     "builtWith": "Feito com Next.js, TypeScript e Tailwind CSS.",
     "rights": "Todos os direitos reservados."
+  },
+  "sectionNav": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "research": "Pesquisa",
+    "experience": "Currículo",
+    "contact": "Contato"
+  },
+  "a11y": {
+    "sectionNavLabel": "Seções da página",
+    "progressLabel": "Progresso na página",
+    "goToSection": "Ir para {section}",
+    "skipToContent": "Pular para o conteúdo"
   }
 }

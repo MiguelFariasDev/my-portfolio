@@ -1,0 +1,64 @@
+{
+  "eyebrow": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "research": "Pesquisa",
+    "experience": "Currículo",
+    "contact": "Contato"
+  },
+  "hero": {
+    "stack": ["C#", "Java", "Golang", "AWS", "Azure"],
+    "scrollHint": "Role para ver mais"
+  },
+  "research": {
+    "title": "Computação em nuvem",
+    "body": "Minha pesquisa de mestrado na UFC é em computação em nuvem. Na prática é a mesma pergunta que me interessa no trabalho, só que com mais tempo para investigar: como um sistema se comporta quando deixa de rodar numa máquina só e passa a depender de infraestrutura que você não controla inteiramente.",
+    "focusTitle": "Onde isso encosta no dia a dia",
+    "focus": [
+      {
+        "id": "platforms",
+        "label": "Plataformas",
+        "body": "AWS e Azure são onde eu testo as ideias e também onde já coloquei sistema em produção."
+      },
+      {
+        "id": "backend",
+        "label": "Backend",
+        "body": "C#, Java e Golang. Linguagens diferentes resolvem o mesmo problema de jeitos que vale a pena comparar."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Trajetória",
+    "body": "Da monitoria de estruturas de dados ao backend de uma fintech, e agora à pesquisa.",
+    "entries": {
+      "akiyama": {
+        "org": "Akiyama",
+        "role": "Pesquisa e Desenvolvimento",
+        "period": "Atual",
+        "body": "Trabalho com visão computacional, em mecanismos de detecção de vivacidade."
+      },
+      "fitbank": {
+        "org": "FitBank",
+        "role": "Desenvolvedor de Sistemas",
+        "period": "Anterior",
+        "body": "Sistemas do setor financeiro: APIs REST, operações bancárias e integração entre serviços que não podiam falhar em silêncio."
+      },
+      "ufc": {
+        "org": "UFC",
+        "role": "Monitor",
+        "period": "4 semestres",
+        "body": "Algoritmos, Estruturas de Dados e Estruturas de Dados Avançadas."
+      },
+      "obi": {
+        "org": "OBI",
+        "role": "Tutor",
+        "period": "Olimpíada Brasileira de Informática",
+        "body": "Lógica de programação e algoritmos, principalmente em Java."
+      }
+    }
+  },
+  "contact": {
+    "title": "Vamos conversar.",
+    "emailLabel": "E-mail"
+  }
+}

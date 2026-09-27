@@ -1,0 +1,64 @@
+{
+  "eyebrow": {
+    "about": "About",
+    "projects": "Projects",
+    "research": "Research",
+    "experience": "Resume",
+    "contact": "Contact"
+  },
+  "hero": {
+    "stack": ["C#", "Java", "Golang", "AWS", "Azure"],
+    "scrollHint": "Scroll for more"
+  },
+  "research": {
+    "title": "Cloud computing",
+    "body": "My master's research at UFC is in cloud computing. It's really the same question that interests me at work, just with more time to dig into it: how a system behaves once it stops running on a single machine and starts depending on infrastructure you don't fully control.",
+    "focusTitle": "Where this meets the day job",
+    "focus": [
+      {
+        "id": "platforms",
+        "label": "Platforms",
+        "body": "AWS and Azure are where I test the ideas, and also where I've shipped systems to production."
+      },
+      {
+        "id": "backend",
+        "label": "Backend",
+        "body": "C#, Java and Golang. Different languages solve the same problem in ways worth comparing."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Background",
+    "body": "From teaching data structures to backend work at a fintech, and now research.",
+    "entries": {
+      "akiyama": {
+        "org": "Akiyama",
+        "role": "Research and Development",
+        "period": "Current",
+        "body": "I work on computer vision, on liveness detection mechanisms."
+      },
+      "fitbank": {
+        "org": "FitBank",
+        "role": "Systems Developer",
+        "period": "Previous",
+        "body": "Financial systems: REST APIs, banking operations, and integrations between services that couldn't fail quietly."
+      },
+      "ufc": {
+        "org": "UFC",
+        "role": "Teaching Assistant",
+        "period": "4 semesters",
+        "body": "Algorithms, Data Structures and Advanced Data Structures."
+      },
+      "obi": {
+        "org": "OBI",
+        "role": "Tutor",
+        "period": "Brazilian Informatics Olympiad",
+        "body": "Programming logic and algorithms, mostly in Java."
+      }
+    }
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "emailLabel": "Email"
+  }
+}

@@ -5,6 +5,7 @@ import { ViewTransition } from "react";
 
 import { PageTransition } from "@/components/page-transition";
 import { PageShell } from "@/components/page-shell";
+import { Reveal } from "@/components/reveal";
 import { Badge } from "@/components/ui/badge";
 import { getDictionary } from "@/lib/dictionaries";
 import { buildMetadata } from "@/lib/seo";
@@ -41,26 +42,15 @@ export default async function AboutPage({
         <div className="grid gap-12 md:grid-cols-[1fr_16rem] md:items-start">
           <div className="space-y-10">
             {about.sections.map((section) => (
-              <section key={section.id} className="space-y-2">
-                <h2 className="text-xl font-semibold">{section.title}</h2>
-                <p className="text-muted-foreground text-base text-pretty">
-                  {section.body}
-                </p>
-              </section>
+              <Reveal key={section.id}>
+                <section className="space-y-3">
+                  <h2 className="text-headline">{section.title}</h2>
+                  <p className="text-muted-foreground text-body max-w-[65ch] text-pretty">
+                    {section.body}
+                  </p>
+                </section>
+              </Reveal>
             ))}
-
-            <section className="space-y-3">
-              <h2 className="text-xl font-semibold">{about.interestsTitle}</h2>
-              <ul className="flex flex-wrap gap-1.5">
-                {about.interests.map((interest) => (
-                  <li key={interest}>
-                    <Badge variant="secondary" className="font-normal">
-                      {interest}
-                    </Badge>
-                  </li>
-                ))}
-              </ul>
-            </section>
           </div>
 
           <aside className="space-y-6">
@@ -79,7 +69,7 @@ export default async function AboutPage({
             </ViewTransition>
 
             <div className="space-y-3">
-              <h2 className="text-sm font-medium tracking-wide">
+              <h2 className="text-muted-foreground text-caption uppercase">
                 {about.stackTitle}
               </h2>
               <ul className="flex flex-wrap gap-1.5">

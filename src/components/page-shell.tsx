@@ -35,9 +35,9 @@ export function PageShell({
   return (
     <div className="mx-auto w-full max-w-5xl px-6 py-16 sm:py-24">
       <header className="mb-12 space-y-3">
-        <h1 className="text-3xl font-semibold sm:text-4xl">{title}</h1>
+        <h1 className="text-title text-balance">{title}</h1>
         {subtitle ? (
-          <p className="text-muted-foreground max-w-2xl text-base text-pretty">
+          <p className="text-muted-foreground text-lead max-w-[52ch] text-pretty">
             {subtitle}
           </p>
         ) : null}

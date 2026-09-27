@@ -1,17 +1,17 @@
 {
   "iustitia": {
     "name": "Iustitia",
-    "summary": "SaaS de gestão jurídica que automatiza o acompanhamento de publicações e prazos processuais em escritórios de advocacia.",
-    "description": "Plataforma SaaS voltada à gestão jurídica para escritórios de advocacia, desenvolvida para automatizar processos relacionados ao acompanhamento de publicações e prazos processuais. O sistema faz a captura automática de publicações do CNJ e as processa e classifica com inteligência artificial (Anthropic Claude), sempre com um fluxo de revisão humana para validar o que a IA produz. A arquitetura é orientada a modularidade, combinando Clean Architecture, DDD, CQRS, Vertical Slice Architecture, Outbox Pattern e multi-tenancy."
+    "summary": "Sistema de gestão jurídica que acompanha publicações e prazos no lugar do advogado.",
+    "description": "Escritório pequeno perde prazo porque alguém precisa ler o diário oficial todo dia. O Iustitia faz essa leitura sozinho: captura as publicações do CNJ, classifica cada uma com IA e só então mostra para uma pessoa decidir. A revisão humana é obrigatória, porque errar a leitura de um prazo custa caro demais para confiar num modelo sem conferência. Por dentro é um monólito modular em .NET, com Clean Architecture, CQRS e multi-tenancy no PostgreSQL."
   },
   "sigis": {
     "name": "SIGIS",
-    "summary": "Sistema intersetorial de apoio à gestão do cuidado de pessoas com TEA na rede pública de Crateús/CE.",
-    "description": "Plataforma intersetorial desenvolvida para apoiar a gestão do cuidado de pessoas com Transtorno do Espectro Autista (TEA) na rede pública municipal de Crateús/CE. O sistema integra informações e processos das áreas de Saúde, Educação e Assistência Social, reduzindo a fragmentação dos dados e oferecendo uma visão unificada do acompanhamento de cada usuário. Foi construído sozinho durante o Hackathon Banco do Nordeste + UFC + Prefeitura de Crateús, sob o nome \"Last Soldier\", com 4º lugar, usando arquitetura de monólito modular."
+    "summary": "Plataforma para acompanhar o cuidado de pessoas com TEA na rede pública de Crateús.",
+    "description": "Quem cuida de uma pessoa com TEA na rede pública lida com três secretarias que não conversam entre si: saúde, educação e assistência social. Cada uma guarda um pedaço da história e ninguém enxerga o todo. O SIGIS junta esses pedaços numa visão só. Construí sozinho durante o hackathon do Banco do Nordeste com a UFC e a Prefeitura de Crateús, sob o nome Last Soldier, e ficou em quarto lugar."
   },
   "filesharing": {
     "name": "FileSharing",
-    "summary": "Plataforma de compartilhamento temporário de arquivos com links privados e expiração automática.",
-    "description": "Plataforma de compartilhamento temporário de arquivos desenvolvida com foco em segurança, escalabilidade e arquitetura limpa. Os usuários fazem upload e compartilham arquivos por meio de links privados e não previsíveis, com validade de 24 horas. Os arquivos ficam em um bucket privado no AWS S3, com upload direto para o S3, autenticação baseada em JWT, geração de links temporários e comunicação em tempo real via SignalR."
+    "summary": "Compartilhamento de arquivos por link privado, com validade de 24 horas.",
+    "description": "Nasceu de um incômodo simples: mandar um arquivo grande para alguém sem depender de nuvem pessoal nem deixar aquilo disponível para sempre. O upload vai direto para um bucket privado no S3, o link é imprevisível e expira em 24 horas. Autenticação em JWT, atualização de progresso em tempo real via SignalR, e Clean Architecture em ASP.NET Core."
   }
 }

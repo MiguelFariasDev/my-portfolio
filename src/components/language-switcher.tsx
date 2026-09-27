@@ -53,7 +53,7 @@ export function LanguageSwitcher({
             onClick={() => selectLocale(option)}
             aria-pressed={active}
             className={cn(
-              "focus-visible:ring-ring relative cursor-pointer rounded-full px-2.5 py-1 uppercase transition-colors focus-visible:ring-2 focus-visible:outline-none",
+              "focus-visible:ring-ring relative cursor-pointer rounded-full px-2.5 py-1 uppercase transition-[color,transform] duration-150 ease-out active:scale-[0.94] focus-visible:ring-2 focus-visible:outline-none",
               active
                 ? "text-foreground"
                 : "text-muted-foreground hover:text-foreground",

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { PageTransition } from "@/components/page-transition";
 import { PageShell, PendingNote } from "@/components/page-shell";
 import { ProjectCard } from "@/components/project-card";
+import { Reveal } from "@/components/reveal";
 import { getDictionary } from "@/lib/dictionaries";
 import { buildMetadata } from "@/lib/seo";
 import { isLocale } from "@/lib/routes";
@@ -39,18 +40,19 @@ export default async function ProjectsPage({
         subtitle={pages.projects.subtitle}
       >
         <div className="grid gap-4 sm:grid-cols-2">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              copy={projectCopy[project.id as keyof typeof projectCopy]}
-              detailed
-              labels={{
-                repository: common.actions.viewRepository,
-                demo: common.actions.viewDemo,
-                status: common.projectStatus[project.status],
-              }}
-            />
+          {projects.map((project, index) => (
+            <Reveal key={project.id} index={index} className="h-full">
+              <ProjectCard
+                project={project}
+                copy={projectCopy[project.id as keyof typeof projectCopy]}
+                detailed
+                labels={{
+                  repository: common.actions.viewRepository,
+                  demo: common.actions.viewDemo,
+                  status: common.projectStatus[project.status],
+                }}
+              />
+            </Reveal>
           ))}
         </div>
 

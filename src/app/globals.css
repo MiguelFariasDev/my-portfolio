@@ -132,6 +132,58 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ==========================================================================
+   Escala tipográfica
+   A regra da Apple (HIG / "The Details of UI Typography"): tracking e leading
+   são função do tamanho, nunca um valor fixo para tudo. Texto grande quer
+   tracking negativo e leading apertado; texto pequeno quer o contrário.
+   Amarrando os três no @theme, o Tailwind gera `text-display` etc. já com
+   leading, tracking e peso corretos — não dá para usar um sem os outros.
+   ========================================================================== */
+@theme {
+  /* Nome na home. Escala com a viewport para não quebrar no celular. */
+  --text-display: clamp(3rem, 8.5vw, 6rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.045em;
+  --text-display--font-weight: 600;
+
+  /* Título de página (Sobre, Projetos, ...). */
+  --text-title: clamp(2.25rem, 5.5vw, 3.75rem);
+  --text-title--line-height: 1.02;
+  --text-title--letter-spacing: -0.038em;
+  --text-title--font-weight: 600;
+
+  /* Título de seção dentro de uma página. */
+  --text-headline: clamp(1.75rem, 3.2vw, 2.5rem);
+  --text-headline--line-height: 1.1;
+  --text-headline--letter-spacing: -0.03em;
+  --text-headline--font-weight: 600;
+
+  /* Título de card: precisa ficar claramente abaixo do título de seção,
+     senão o card compete com a seção que o contém. */
+  --text-subhead: 1.1875rem;
+  --text-subhead--line-height: 1.3;
+  --text-subhead--letter-spacing: -0.015em;
+  --text-subhead--font-weight: 600;
+
+  /* Frase de abertura: maior que o corpo, ainda com tracking levemente negativo. */
+  --text-lead: clamp(1.25rem, 1.9vw, 1.625rem);
+  --text-lead--line-height: 1.35;
+  --text-lead--letter-spacing: -0.02em;
+
+  /* Corpo: 17px, o mesmo tamanho base que a Apple usa em iOS. Tracking zero. */
+  --text-body: 1.0625rem;
+  --text-body--line-height: 1.55;
+  --text-body--letter-spacing: 0em;
+
+  /* Rótulo pequeno (eyebrow, labels). Tracking POSITIVO: texto pequeno
+     precisa abrir, não fechar. */
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
+  --text-caption--letter-spacing: 0.06em;
+  --text-caption--font-weight: 500;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring;
@@ -141,6 +193,11 @@
   }
   html {
     @apply font-sans;
+    /* A Geist é variável: deixa o navegador ajustar o desenho ao tamanho. */
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 }
 /* ==========================================================================
@@ -364,5 +421,146 @@
     backdrop-filter: none;
     border-bottom-color: var(--border);
     animation: none;
+  }
+}
+
+/* ==========================================================================
+   Seções de tela cheia
+   Cada seção é um painel de uma viewport. `100dvh` (não `100svh` nem `100vh`)
+   porque acompanha a barra do navegador móvel aparecendo e sumindo — com
+   `100vh` o conteúdo fica cortado atrás dela no iOS.
+
+   `min-height`, não `height`: se o conteúdo passar de uma tela (celular
+   baixo, texto ampliado pelo usuário), a seção cresce em vez de esconder o
+   que não coube.
+   ========================================================================== */
+
+.section-panel {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  /* O header flutua por cima; sem isto o topo da seção fica embaixo dele. */
+  scroll-margin-top: 0;
+  padding-block: 6rem 4rem;
+}
+
+/* --------------------------------------------------------------------------
+   Encaixe entre painéis
+   `mandatory` só quando a seção CABE na tela. Numa viewport baixa uma seção
+   mais alta que a janela vira armadilha: o snap puxa de volta para o topo do
+   painel e o fim do conteúdo fica inalcançável. Abaixo do limite, o scroll
+   volta a ser livre.
+   -------------------------------------------------------------------------- */
+@media (min-height: 800px) and (min-width: 768px) {
+  html:has(.section-stack) {
+    scroll-snap-type: y mandatory;
+  }
+
+  .section-panel {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+  }
+
+  /* Sem isto o último ponto de encaixe é o topo de Contato e o rodapé (com
+     os links sociais) vira área morta: medi 185px que a rolagem nunca
+     alcançava. Como alvo de encaixe pelo fim, ele passa a ser acessível. */
+  html:has(.section-stack) footer {
+    scroll-snap-align: end;
+  }
+}
+
+html:has(.section-stack) {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:has(.section-stack) {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Entrada dos elementos
+   Ordem de leitura: título, descrição, apoio visual, cards. O escalonamento é
+   por posição de scroll (--reveal-index), não por delay em segundos — rolando
+   rápido, nada fica devendo animação.
+
+   O estado escondido vive DENTRO do @supports: sem suporte a
+   animation-timeline, tudo nasce visível.
+   -------------------------------------------------------------------------- */
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.5rem, 0) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      /* Fecha na fase `entry`: terminar em `cover` deixaria os últimos blocos
+         da página parados em opacidade fracionária numa tela alta, porque a
+         rolagem acaba antes de o range completar. */
+      animation-range: entry calc(4% + var(--reveal-index, 0) * 4%) entry
+        calc(64% + var(--reveal-index, 0) * 4%);
+      will-change: opacity, transform;
+    }
+  }
+}
+
+/* ==========================================================================
+   Vidro
+   Material translúcido de verdade: fundo bem abaixo de 100%, blur forte e
+   saturação acima de 1 para a cor de trás "vazar" — sem saturar, o blur
+   vira cinza e o efeito some. A aresta clara no topo é a luz pegando na
+   borda do material; a escura embaixo o descola do que vem depois.
+   ========================================================================== */
+
+.glass-panel {
+  background-color: color-mix(in oklch, var(--card) 55%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow:
+    inset 0 1px 0 0 color-mix(in oklch, var(--foreground) 9%, transparent),
+    inset 0 0 0 1px color-mix(in oklch, var(--foreground) 7%, transparent),
+    0 1px 2px -1px color-mix(in oklch, var(--foreground) 10%, transparent),
+    0 12px 32px -12px color-mix(in oklch, var(--foreground) 18%, transparent);
+}
+
+/* Superfícies maiores leem como mais espessas: blur e sombra maiores. */
+.glass-chrome {
+  background-color: color-mix(in oklch, var(--background) 60%, transparent);
+  backdrop-filter: blur(32px) saturate(190%);
+  box-shadow: inset 0 1px 0 0
+    color-mix(in oklch, var(--foreground) 8%, transparent);
+}
+
+/* Sem suporte a backdrop-filter não existe vidro: o fundo vira sólido,
+   senão o texto fica sobre uma superfície semitransparente e ilegível. */
+@supports not (backdrop-filter: blur(1px)) {
+  .glass-panel {
+    background-color: var(--card);
+  }
+  .glass-chrome {
+    background-color: var(--background);
+  }
+}
+
+/* Quem pede menos transparência recebe superfície sólida (§14). */
+@media (prefers-reduced-transparency: reduce) {
+  .glass-panel {
+    background-color: var(--card);
+    backdrop-filter: none;
+  }
+  .glass-chrome {
+    background-color: var(--background);
+    backdrop-filter: none;
   }
 }

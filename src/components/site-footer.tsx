@@ -28,7 +28,7 @@ export function SiteFooter({
                 href={social.href}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="hover:text-brand transition-colors"
+                className="hover:text-brand inline-block transition-[color,transform] duration-150 ease-out active:scale-[0.96]"
               >
                 {social.label}
               </a>

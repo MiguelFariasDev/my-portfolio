@@ -1,111 +1,77 @@
 {
   "home": {
-    "metaTitle": "Miguel Farias | Software Developer and Researcher",
-    "metaDescription": "Fullstack developer focused on backend engineering, software architecture and distributed systems. C#/.NET, AWS, React and TypeScript.",
-    "eyebrow": "Fullstack Developer · C# / .NET / AWS / React / TypeScript",
+    "metaTitle": "Miguel Farias | Backend Developer",
+    "metaDescription": "Backend developer working in C# and .NET. Master's student in cloud computing at the Federal University of Ceará.",
+    "eyebrow": "Backend developer · Master's student in cloud computing",
     "title": "Miguel Farias",
-    "role": "Software Developer and Researcher",
-    "summary": "I turn complex problems into robust, efficient and scalable systems. I work with backend engineering, software architecture and cloud computing, shaped by production work in fintech and master's research on distributed systems at UFC.",
-    "highlightsTitle": "At a glance",
+    "role": "Backend developer and researcher",
+    "summary": "I work on backend, mostly in C# and .NET. I did my bachelor's in Computer Science at UFC and I'm still there for my master's, researching cloud computing.",
+    "highlightsTitle": "Where I've been",
     "highlights": [
-      "Backend engineering in fintech at FitBank, working with C#, .NET, Angular, SQL Server, MongoDB and Azure on high-demand, high-availability systems.",
-      "Research and development at Akiyama, applying artificial intelligence and computer vision to liveness detection.",
-      "Master's student in Computer Science at UFC, researching computational offloading in Mobile Cloud Computing over gRPC."
+      "Built financial systems at FitBank, a fintech, using C#, .NET, SQL Server and Azure.",
+      "Now in research and development at Akiyama, working on computer vision.",
+      "Master's student in Computer Science at UFC, in the cloud computing track."
     ],
-    "featuredProjectsTitle": "Featured projects",
-    "featuredProjectsSubtitle": "Three systems that capture what I like to build: deliberate architecture, service integration, and real domain problems solved end to end."
+    "featuredProjectsTitle": "Projects",
+    "featuredProjectsSubtitle": "Three systems I built end to end, each for a different reason."
   },
   "about": {
     "metaTitle": "About",
-    "metaDescription": "Miguel Farias' education, research, professional background and areas of interest.",
+    "metaDescription": "Background, career and interests of Miguel Farias, a backend developer and master's student in cloud computing.",
     "title": "About",
-    "subtitle": "Software developer and researcher, working across product development, academic research and hands-on exploration of new technology.",
+    "subtitle": "Backend developer. Master's student in cloud computing at UFC.",
     "sections": [
       {
         "id": "intro",
         "title": "Who I am",
-        "body": "I'm a software developer and researcher with a background in Computer Science, experience in backend development, and a strong interest in software architecture, cloud computing, distributed systems and artificial intelligence. My work sits at the intersection of product development, academic research and hands-on exploration, building systems that balance architectural quality, performance, security and scalability."
+        "body": "I started programming during my degree and ended up staying in the backend, which is where I feel most at home. What keeps me there is thinking about how a system is put together on the inside: what belongs in each layer, what talks to what, and what happens when one piece gives out."
       },
       {
         "id": "education",
         "title": "Education",
-        "body": "I hold a Bachelor's degree in Computer Science from the Federal University of Ceará (UFC), where I'm currently pursuing a Master's degree in the same field. My academic background is grounded in practical work: software development, scientific research, teaching assistance and projects of my own."
+        "body": "I hold a bachelor's degree in Computer Science from the Federal University of Ceará, and I'm still at UFC for my master's in the same field."
       },
       {
         "id": "research",
         "title": "Research",
-        "body": "My master's research addresses computational offloading in Mobile Cloud Computing, investigating the computational and energy impact of processing mobile workloads remotely through bidirectional gRPC communication. The work involves experimentation across mobile devices and servers, measuring energy consumption, CPU and memory usage, and communication and processing performance, alongside a comparison of different languages and offloading strategies. The goal is to clarify the trade-offs involved in moving computation from mobile devices to remote resources."
+        "body": "My master's research is in cloud computing. It's the area I'm most interested in right now, and it's what got me paying closer attention to AWS and Azure outside the university too."
       },
       {
         "id": "career",
-        "title": "Professional background",
-        "body": "I worked as a systems developer at FitBank, a company in the financial sector, primarily with C#, .NET, Angular, SQL Server, MongoDB and Azure. I contributed to building and maintaining financial systems: REST APIs, banking operations, service integration, legacy maintenance and architectural evolution, applying practices such as Clean Architecture, SOLID, Git, CI/CD and agile methodologies. I currently work in research and development at Akiyama on artificial intelligence and computer vision, including liveness detection mechanisms and applied Deep Learning models."
+        "title": "Career",
+        "body": "I worked at FitBank, a fintech, building financial systems in C#, .NET, SQL Server and Azure. A lot of the job was integration: APIs that had to talk to other services without bringing anything down along the way. I'm now at Akiyama, in research and development, working on computer vision."
       },
       {
         "id": "teaching",
         "title": "Teaching",
-        "body": "During my undergraduate studies at UFC, I spent four semesters as a teaching assistant for Algorithms, Data Structures and Advanced Data Structures, helping students build a solid grasp of programming fundamentals and problem solving. I also tutored for the Brazilian Informatics Olympiad (OBI), coaching students in programming logic and algorithms, mostly in Java. Both roles sharpened my technical communication and mentoring skills, and deepened my own understanding of the fundamentals."
+        "body": "I was a teaching assistant for Algorithms and Data Structures at UFC for four semesters, and a tutor for the Brazilian Informatics Olympiad. Explaining pointers and binary trees to someone seeing them for the first time teaches you more than you'd expect."
       }
     ],
-    "stackTitle": "Stack",
-    "stack": [
-      "C#",
-      ".NET",
-      "Java",
-      "Golang",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Angular",
-      "ASP.NET Core",
-      "PostgreSQL",
-      "SQL Server",
-      "MongoDB",
-      "AWS",
-      "Azure",
-      "gRPC"
-    ],
-    "interestsTitle": "Areas of interest",
-    "interests": [
-      "Software Development",
-      "Backend and Fullstack",
-      "C# / .NET",
-      "Cloud Computing",
-      "AWS and Azure",
-      "Distributed Systems",
-      "Software Architecture",
-      "Design Patterns",
-      "Artificial Intelligence",
-      "Deep Learning",
-      "Computer Vision",
-      "Mobile Cloud Computing",
-      "Computational Offloading",
-      "Software Engineering",
-      "Scalable, high-availability systems"
-    ]
+    "stackTitle": "Technologies",
+    "stack": ["C#", "Java", "Golang", "AWS", "Azure"]
   },
   "projects": {
     "metaTitle": "Projects",
-    "metaDescription": "Software projects built by Miguel Farias: Iustitia, SIGIS and FileSharing.",
+    "metaDescription": "Projects by Miguel Farias: Iustitia, SIGIS and FileSharing.",
     "title": "Projects",
-    "subtitle": "Systems built from scratch, each with deliberate architectural decisions and a real domain problem behind it.",
-    "emptyImagesNotice": "Screenshots of these systems are coming soon."
+    "subtitle": "Three systems I built end to end, each for a different reason.",
+    "emptyImagesNotice": "I still need to add screenshots of these systems here."
   },
   "resume": {
     "metaTitle": "Resume",
     "metaDescription": "Miguel Farias' resume in PDF, available in English and Portuguese.",
     "title": "Resume",
-    "subtitle": "Education, professional experience and technical skills in a single page.",
-    "languageNotice": "This PDF is in English. Switch the site language to download the Portuguese version.",
-    "viewerFallback": "This browser can't display the PDF inline. Use the download button above."
+    "subtitle": "Education, experience and technologies on a single page.",
+    "languageNotice": "This PDF is in English. For the Portuguese version, switch the site language.",
+    "viewerFallback": "Your browser couldn't open the PDF here. Use the download button above."
   },
   "contact": {
     "metaTitle": "Contact",
     "metaDescription": "Get in touch with Miguel Farias by email, LinkedIn or GitHub.",
     "title": "Contact",
-    "subtitle": "Open to conversations about opportunities, research collaboration and software projects. Email is the most direct route.",
+    "subtitle": "If you want to talk about a role, about research, or about a project, email is the fastest way to reach me.",
     "emailLabel": "Email",
-    "locationLabel": "Location",
+    "locationLabel": "Where I am",
     "socialsLabel": "Social"
   }
 }

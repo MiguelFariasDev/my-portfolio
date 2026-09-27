@@ -30,10 +30,10 @@ export function ProjectCard({
     // O mesmo projeto aparece em destaque na home e completo na página de
     // projetos: o card voa de um lugar para o outro em vez de sumir e reaparecer.
     <ViewTransition name={`project-${project.id}`} share="morph" default="none">
-      <Card className="h-full transition-shadow hover:shadow-md">
+      <Card className="glass-panel h-full border-0 ring-0 transition-[box-shadow,transform] duration-200 ease-out">
         <CardHeader className="space-y-3">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="text-lg font-semibold">{copy.name}</h3>
+            <h3 className="text-subhead">{copy.name}</h3>
             <Badge variant="secondary">{labels.status}</Badge>
           </div>
           <p className="text-muted-foreground text-sm text-pretty">
@@ -65,7 +65,7 @@ export function ProjectCard({
               href={project.repoUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="text-muted-foreground hover:text-brand underline-offset-4 transition-colors hover:underline"
+              className="text-muted-foreground hover:text-brand inline-block underline-offset-4 transition-[color,transform] duration-150 ease-out hover:underline active:scale-[0.96]"
             >
               {labels.repository}
             </a>
@@ -75,7 +75,7 @@ export function ProjectCard({
               href={project.demoUrl}
               target="_blank"
               rel="noreferrer noopener"
-              className="text-muted-foreground hover:text-brand underline-offset-4 transition-colors hover:underline"
+              className="text-muted-foreground hover:text-brand inline-block underline-offset-4 transition-[color,transform] duration-150 ease-out hover:underline active:scale-[0.96]"
             >
               {labels.demo}
             </a>

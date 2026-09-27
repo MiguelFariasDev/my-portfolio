@@ -113,3 +113,35 @@ export const projects: Project[] = [
     images: [],
   },
 ];
+
+
+export type ExperienceEntry = {
+  id: string;
+  kind: "work" | "teaching";
+  stack: string[];
+};
+
+/** Trajetória. Os textos por idioma vivem em content/{pt,en}/sections.json. */
+export const experience: ExperienceEntry[] = [
+  {
+    id: "akiyama",
+    kind: "work",
+    stack: ["Python", "Deep Learning", "Computer Vision", "Liveness Detection"],
+  },
+  {
+    id: "fitbank",
+    kind: "work",
+    stack: [
+      "C#",
+      ".NET",
+      "Angular",
+      "SQL Server",
+      "MongoDB",
+      "Azure",
+      "REST",
+      "CI/CD",
+    ],
+  },
+  { id: "ufc", kind: "teaching", stack: ["Algoritmos", "Estruturas de Dados"] },
+  { id: "obi", kind: "teaching", stack: ["Java", "Algoritmos"] },
+];

@@ -84,6 +84,14 @@ export default async function LocaleLayout({
           enableSystem
           disableTransitionOnChange
         >
+          {/* Primeiro elemento focável da página: quem navega por teclado
+              pula o header inteiro em vez de tabular por toda a navegação. */}
+          <a
+            href="#main"
+            className="bg-background text-foreground focus-visible:ring-ring sr-only rounded-lg px-4 py-2 text-sm focus-visible:not-sr-only focus-visible:fixed focus-visible:top-3 focus-visible:left-3 focus-visible:z-[60] focus-visible:ring-2 focus-visible:outline-none"
+          >
+            {common.a11y.skipToContent}
+          </a>
           <SiteHeader
             locale={lang}
             items={navItems}
@@ -92,9 +100,13 @@ export default async function LocaleLayout({
               openMenu: common.actions.openMenu,
               language: common.language.label,
               theme: common.theme,
+              sectionNav: common.sectionNav,
+              sectionNavLabel: common.a11y.sectionNavLabel,
             }}
           />
-          <main className="flex-1">{children}</main>
+          <main id="main" className="flex-1">
+            {children}
+          </main>
           <SiteFooter
             name={site.name}
             builtWith={common.footer.builtWith}

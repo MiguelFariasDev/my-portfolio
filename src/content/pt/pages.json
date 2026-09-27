@@ -1,111 +1,77 @@
 {
   "home": {
-    "metaTitle": "Miguel Farias | Desenvolvedor de Software e Pesquisador",
-    "metaDescription": "Desenvolvedor fullstack com foco em backend, arquitetura de software e sistemas distribuídos. C#/.NET, AWS, React e TypeScript.",
-    "eyebrow": "Desenvolvedor FullStack · C# / .NET / AWS / React / TypeScript",
+    "metaTitle": "Miguel Farias | Desenvolvedor Backend",
+    "metaDescription": "Desenvolvedor backend em C# e .NET. Mestrando em computação em nuvem na Universidade Federal do Ceará.",
+    "eyebrow": "Desenvolvedor backend · Mestrando em computação em nuvem",
     "title": "Miguel Farias",
-    "role": "Desenvolvedor de Software e Pesquisador",
-    "summary": "Transformo problemas complexos em sistemas robustos, eficientes e escaláveis. Trabalho com backend, arquitetura de software e computação em nuvem, com passagem pelo setor financeiro e pesquisa de mestrado em sistemas distribuídos na UFC.",
-    "highlightsTitle": "Em resumo",
+    "role": "Desenvolvedor backend e pesquisador",
+    "summary": "Trabalho com backend, principalmente em C# e .NET. Sou bacharel em Ciência da Computação pela UFC e continuo lá no mestrado, pesquisando computação em nuvem.",
+    "highlightsTitle": "Onde estive",
     "highlights": [
-      "Desenvolvimento backend no setor financeiro na FitBank, com C#, .NET, Angular, SQL Server, MongoDB e Azure em ambientes de alta demanda.",
-      "Pesquisa e Desenvolvimento na Akiyama, com inteligência artificial e visão computacional aplicadas a detecção de vivacidade.",
-      "Mestrado em Ciência da Computação na UFC, pesquisando computational offloading em Mobile Cloud Computing via gRPC."
+      "Desenvolvi sistemas do setor financeiro na FitBank, em C#, .NET, SQL Server e Azure.",
+      "Hoje trabalho com pesquisa e desenvolvimento na Akiyama, na área de visão computacional.",
+      "Faço mestrado em Ciência da Computação na UFC, na linha de computação em nuvem."
     ],
-    "featuredProjectsTitle": "Projetos em destaque",
-    "featuredProjectsSubtitle": "Três sistemas que resumem o que me interessa construir: arquitetura bem definida, integração entre serviços e problemas reais resolvidos de ponta a ponta."
+    "featuredProjectsTitle": "Projetos",
+    "featuredProjectsSubtitle": "Três sistemas que construí do começo ao fim, cada um por um motivo diferente."
   },
   "about": {
     "metaTitle": "Sobre",
-    "metaDescription": "Formação, pesquisa, trajetória profissional e áreas de interesse de Miguel Farias.",
+    "metaDescription": "Formação, trajetória e áreas de interesse de Miguel Farias, desenvolvedor backend e mestrando em computação em nuvem.",
     "title": "Sobre",
-    "subtitle": "Desenvolvedor de software e pesquisador, com atuação entre desenvolvimento de produtos, pesquisa acadêmica e exploração de novas tecnologias.",
+    "subtitle": "Desenvolvedor backend. Mestrando em computação em nuvem na UFC.",
     "sections": [
       {
         "id": "intro",
         "title": "Quem sou",
-        "body": "Sou desenvolvedor de software e pesquisador com formação em Ciência da Computação, experiência em desenvolvimento backend e interesse em arquitetura de software, computação em nuvem, sistemas distribuídos e inteligência artificial. Minha atuação combina desenvolvimento de produtos, pesquisa acadêmica e exploração de novas tecnologias, buscando construir sistemas que conciliem qualidade arquitetural, desempenho, segurança e escalabilidade."
+        "body": "Comecei a programar na graduação e acabei ficando no backend, que é onde me sinto mais à vontade. O que me prende é pensar em como um sistema se organiza por dentro: o que fica em cada camada, o que conversa com o quê, e o que acontece quando alguma parte falha."
       },
       {
         "id": "education",
         "title": "Formação",
-        "body": "Sou Bacharel em Ciência da Computação pela Universidade Federal do Ceará (UFC) e atualmente curso Mestrado em Ciência da Computação na mesma instituição. Minha formação acadêmica é complementada por experiência prática em desenvolvimento de software, pesquisa científica, monitoria acadêmica e desenvolvimento de projetos próprios."
+        "body": "Sou bacharel em Ciência da Computação pela Universidade Federal do Ceará e sigo na UFC no mestrado, também em Ciência da Computação."
       },
       {
         "id": "research",
         "title": "Pesquisa",
-        "body": "Minha pesquisa de mestrado está relacionada a Computational Offloading em ambientes de Mobile Cloud Computing, investigando o impacto computacional e energético do processamento remoto de aplicações móveis utilizando comunicação bidirecional via gRPC. O trabalho envolve experimentação em dispositivos móveis e servidores, análise de consumo energético, utilização de CPU e memória, desempenho de comunicação e processamento, além da avaliação de diferentes linguagens e estratégias de offloading. A pesquisa busca contribuir para a compreensão dos trade-offs envolvidos na transferência de processamento entre dispositivos móveis e recursos computacionais remotos."
+        "body": "No mestrado pesquiso computação em nuvem. É a área que mais me interessa hoje, e foi ela que me levou a olhar AWS e Azure com mais atenção também fora da universidade."
       },
       {
         "id": "career",
-        "title": "Trajetória profissional",
-        "body": "Atuei como desenvolvedor de sistemas na FitBank, empresa do setor financeiro, trabalhando principalmente com C#, .NET, Angular, SQL Server, MongoDB e Azure. Participei do desenvolvimento e manutenção de sistemas do setor financeiro, com APIs REST, operações bancárias, integração entre serviços, manutenção de sistemas legados e evolução arquitetural, além de práticas como Clean Architecture, SOLID, Git, CI/CD e metodologias ágeis. Atualmente atuo em Pesquisa e Desenvolvimento na Akiyama, com soluções de inteligência artificial e visão computacional, incluindo mecanismos de detecção de vivacidade (liveness) e aplicação de modelos de Deep Learning."
+        "title": "Trajetória",
+        "body": "Passei pela FitBank, uma fintech, desenvolvendo sistemas do setor financeiro em C#, .NET, SQL Server e Azure. Boa parte do trabalho era integração: APIs que precisavam conversar com outros serviços sem derrubar nada no caminho. Hoje estou na Akiyama, em pesquisa e desenvolvimento, trabalhando com visão computacional."
       },
       {
         "id": "teaching",
         "title": "Ensino",
-        "body": "Durante a graduação na UFC, atuei como monitor acadêmico por quatro semestres em disciplinas de Algoritmos, Estruturas de Dados e Estruturas de Dados Avançadas, auxiliando estudantes na compreensão de fundamentos de programação e resolução de problemas. Também fui tutor da Olimpíada Brasileira de Informática (OBI), trabalhando lógica de programação e algoritmos principalmente em Java. Essas experiências desenvolveram minhas habilidades de comunicação técnica, didática e mentoria, e fortaleceram minha própria compreensão dos fundamentos da computação."
+        "body": "Fui monitor de Algoritmos e Estruturas de Dados na UFC por quatro semestres e tutor da Olimpíada Brasileira de Informática. Explicar ponteiro e árvore binária para quem está vendo aquilo pela primeira vez ensina mais do que parece."
       }
     ],
-    "stackTitle": "Stack",
-    "stack": [
-      "C#",
-      ".NET",
-      "Java",
-      "Golang",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Angular",
-      "ASP.NET Core",
-      "PostgreSQL",
-      "SQL Server",
-      "MongoDB",
-      "AWS",
-      "Azure",
-      "gRPC"
-    ],
-    "interestsTitle": "Áreas de interesse",
-    "interests": [
-      "Desenvolvimento de Software",
-      "Backend e FullStack",
-      "C# / .NET",
-      "Cloud Computing",
-      "AWS e Azure",
-      "Sistemas Distribuídos",
-      "Arquitetura de Software",
-      "Design Patterns",
-      "Inteligência Artificial",
-      "Deep Learning",
-      "Computer Vision",
-      "Mobile Cloud Computing",
-      "Computational Offloading",
-      "Engenharia de Software",
-      "Sistemas escaláveis e de alta disponibilidade"
-    ]
+    "stackTitle": "Tecnologias",
+    "stack": ["C#", "Java", "Golang", "AWS", "Azure"]
   },
   "projects": {
     "metaTitle": "Projetos",
-    "metaDescription": "Projetos de software desenvolvidos por Miguel Farias: Iustitia, SIGIS e FileSharing.",
+    "metaDescription": "Projetos de Miguel Farias: Iustitia, SIGIS e FileSharing.",
     "title": "Projetos",
-    "subtitle": "Sistemas construídos do zero, com decisões de arquitetura documentadas e problemas de domínio reais por trás de cada um.",
-    "emptyImagesNotice": "Capturas de tela dos sistemas serão adicionadas em breve."
+    "subtitle": "Três sistemas que construí do começo ao fim, cada um por um motivo diferente.",
+    "emptyImagesNotice": "Ainda vou adicionar capturas de tela dos sistemas aqui."
   },
   "resume": {
     "metaTitle": "Currículo",
-    "metaDescription": "Currículo de Miguel Farias em PDF, em português e inglês.",
+    "metaDescription": "Currículo de Miguel Farias em PDF, disponível em português e inglês.",
     "title": "Currículo",
-    "subtitle": "Formação, experiência profissional e competências técnicas em um documento de uma página.",
-    "languageNotice": "Este PDF está em português. Troque o idioma do site para baixar a versão em inglês.",
-    "viewerFallback": "Não foi possível exibir o PDF neste navegador. Use o botão de download acima."
+    "subtitle": "Formação, experiência e tecnologias em uma página.",
+    "languageNotice": "Este PDF está em português. Para a versão em inglês, troque o idioma do site.",
+    "viewerFallback": "Seu navegador não conseguiu abrir o PDF aqui. Use o botão de download acima."
   },
   "contact": {
     "metaTitle": "Contato",
-    "metaDescription": "Entre em contato com Miguel Farias por e-mail, LinkedIn ou GitHub.",
+    "metaDescription": "Fale com Miguel Farias por e-mail, LinkedIn ou GitHub.",
     "title": "Contato",
-    "subtitle": "Aberto a conversas sobre oportunidades, colaborações em pesquisa e projetos de software. O e-mail é o caminho mais direto.",
+    "subtitle": "Se quiser falar sobre uma vaga, sobre pesquisa ou sobre algum projeto, o e-mail é o jeito mais rápido de me achar.",
     "emailLabel": "E-mail",
-    "locationLabel": "Localização",
+    "locationLabel": "Onde estou",
     "socialsLabel": "Redes"
   }
 }
