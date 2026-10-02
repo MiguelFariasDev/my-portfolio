@@ -124,6 +124,11 @@ export type ExperienceEntry = {
 /** Trajetória. Os textos por idioma vivem em content/{pt,en}/sections.json. */
 export const experience: ExperienceEntry[] = [
   {
+    id: "hitss",
+    kind: "work",
+    stack: ["C#", ".NET Framework 4.7"],
+  },
+  {
     id: "akiyama",
     kind: "work",
     stack: ["Python", "Deep Learning", "Computer Vision", "Liveness Detection"],

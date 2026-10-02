@@ -9,7 +9,8 @@
     "highlightsTitle": "Where I've been",
     "highlights": [
       "Built financial systems at FitBank, a fintech, using C#, .NET, SQL Server and Azure.",
-      "Now in research and development at Akiyama, working on computer vision.",
+      "Now developing systems at Petrobras through Hitss Brasil, in C# and .NET Framework 4.7.",
+      "Also in research and development at Akiyama, working on computer vision.",
       "Master's student in Computer Science at UFC, in the cloud computing track."
     ],
     "featuredProjectsTitle": "Projects",
@@ -39,7 +40,7 @@
       {
         "id": "career",
         "title": "Career",
-        "body": "I worked at FitBank, a fintech, building financial systems in C#, .NET, SQL Server and Azure. A lot of the job was integration: APIs that had to talk to other services without bringing anything down along the way. I'm now at Akiyama, in research and development, working on computer vision."
+        "body": "I worked at FitBank, a fintech, building financial systems in C#, .NET, SQL Server and Azure. A lot of the job was integration: APIs that had to talk to other services without bringing anything down along the way. I now work at Hitss Brasil, as a contractor at Petrobras, developing systems in C# and .NET Framework 4.7. I'm also at Akiyama, in research and development, working on computer vision."
       },
       {
         "id": "teaching",

@@ -9,7 +9,8 @@
     "highlightsTitle": "Onde estive",
     "highlights": [
       "Desenvolvi sistemas do setor financeiro na FitBank, em C#, .NET, SQL Server e Azure.",
-      "Hoje trabalho com pesquisa e desenvolvimento na Akiyama, na área de visão computacional.",
+      "Hoje desenvolvo sistemas na Petrobras, pela Hitss Brasil, em C# e .NET Framework 4.7.",
+      "Também atuo com pesquisa e desenvolvimento na Akiyama, na área de visão computacional.",
       "Faço mestrado em Ciência da Computação na UFC, na linha de computação em nuvem."
     ],
     "featuredProjectsTitle": "Projetos",
@@ -39,7 +40,7 @@
       {
         "id": "career",
         "title": "Trajetória",
-        "body": "Passei pela FitBank, uma fintech, desenvolvendo sistemas do setor financeiro em C#, .NET, SQL Server e Azure. Boa parte do trabalho era integração: APIs que precisavam conversar com outros serviços sem derrubar nada no caminho. Hoje estou na Akiyama, em pesquisa e desenvolvimento, trabalhando com visão computacional."
+        "body": "Passei pela FitBank, uma fintech, desenvolvendo sistemas do setor financeiro em C#, .NET, SQL Server e Azure. Boa parte do trabalho era integração: APIs que precisavam conversar com outros serviços sem derrubar nada no caminho. Hoje trabalho na Hitss Brasil, como terceirizado na Petrobras, desenvolvendo sistemas em C# e .NET Framework 4.7. Também estou na Akiyama, em pesquisa e desenvolvimento, trabalhando com visão computacional."
       },
       {
         "id": "teaching",

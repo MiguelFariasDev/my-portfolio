@@ -31,6 +31,12 @@
     "title": "Background",
     "body": "From teaching data structures to backend work at a fintech, and now research.",
     "entries": {
+      "hitss": {
+        "org": "Hitss Brasil",
+        "role": "Systems Developer (contractor at Petrobras)",
+        "period": "Oct 2026 – Present",
+        "body": "Developing systems at Petrobras as a contractor, working with C# and .NET Framework 4.7."
+      },
       "akiyama": {
         "org": "Akiyama",
         "role": "Research and Development",

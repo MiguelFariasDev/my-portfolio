@@ -31,6 +31,12 @@
     "title": "Trajetória",
     "body": "Da monitoria de estruturas de dados ao backend de uma fintech, e agora à pesquisa.",
     "entries": {
+      "hitss": {
+        "org": "Hitss Brasil",
+        "role": "Desenvolvedor de Sistemas (terceirizado na Petrobras)",
+        "period": "Out 2026 – Atual",
+        "body": "Desenvolvimento de sistemas na Petrobras, atuando de forma terceirizada, com C# e .NET Framework 4.7."
+      },
       "akiyama": {
         "org": "Akiyama",
         "role": "Pesquisa e Desenvolvimento",
